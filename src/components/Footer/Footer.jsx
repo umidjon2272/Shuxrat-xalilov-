@@ -2,14 +2,14 @@ import { SERVICES } from '../../data';
 import './Footer.scss';
 
 const SOCIALS = [
-  { icon: '✈️', label: 'Telegram',  href: 'https://t.me/azizjon_smm' },
-  { icon: '📸', label: 'Instagram', href: 'https://instagram.com/azizjon.smm' },
+  { icon: '✈️', label: 'Telegram', href: 'https://t.me/shuxrat_xalilov' },
+  { icon: '📸', label: 'Instagram', href: 'https://www.instagram.com/shuxratxalilov_?igsh=b2kzeTV6eWV5ZW9q' },
 ];
 
 const CONTACTS_FOOTER = [
-  { icon: '📞', value: '+998 90 123 45 67' },
-  { icon: '✈️', value: '@azizjon_smm' },
-  { icon: '📍', value: 'Toshkent, Uzbekiston' },
+  { icon: '📞', value: '+998 94 880 59 69', href: 'tel:+998948805969' },
+  { icon: '✈️', value: '@shuxratxalilov_', href: 'https://t.me/shuxrat_xalilov' },
+  { icon: '📍', value: 'Toshkent, Uzbekiston', href: 'https://maps.google.com/?q=Toshkent' },
 ];
 
 export default function Footer() {
@@ -20,25 +20,29 @@ export default function Footer() {
       <div className="footer__inner">
         <div className="footer__grid">
 
-          {/* Brand */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <div className="footer__logo-icon">A</div>
-              <span className="footer__logo-text">Azizjon<span>SMM</span></span>
+              <div className="footer__logo-icon">SH</div>
+              <span className="footer__logo-text">Shuxrat<span>Xalilov</span></span>
             </div>
             <p className="footer__tagline">
               Toshkent shahridagi SMM mutaxassisi. Biznesingizni ijtimoiy tarmoqlarda muvaffaqiyatli rivojlantirish uchun shu yerdaman.
             </p>
             <div className="footer__socials">
               {SOCIALS.map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="footer__social">
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer__social"
+                >
                   <span>{s.icon}</span> {s.label}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Services */}
           <div>
             <div className="footer__col-title">Xizmatlar</div>
             {SERVICES.slice(0, 5).map(s => (
@@ -48,21 +52,27 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Contact */}
           <div>
-            <div className="footer__col-title">Bog&apos;lanish</div>
+            <div className="footer__col-title">Bog'lanish</div>
             {CONTACTS_FOOTER.map(c => (
-              <div key={c.value} className="footer__contact-row">
+              <a
+                key={c.value}
+                href={c.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__contact-row"
+                style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+              >
                 <span>{c.icon}</span> {c.value}
-              </div>
+              </a>
             ))}
           </div>
 
         </div>
 
         <div className="footer__bottom">
-          <span className="footer__copy">© 2024 AzizjonSMM. Barcha huquqlar himoyalangan.</span>
-          <span className="footer__location">Toshkent, O&apos;zbekiston 🇺🇿</span>
+          <span className="footer__copy">© 2024 Shuxrat Xalilov. Barcha huquqlar himoyalangan.</span>
+          <span className="footer__location">Toshkent, O'zbekiston 🇺🇿</span>
         </div>
       </div>
     </footer>
