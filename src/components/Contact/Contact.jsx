@@ -31,15 +31,13 @@ export default function Contact() {
     try {
       setLoading(true);
 
-      const response = await fetch(
-        'http://localhost:5000/lead',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(form),
-        }
+      const response = await fetch('https://smm-portfolio.onrender.com/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      }
       );
 
       const data = await response.json();
@@ -125,9 +123,8 @@ export default function Contact() {
 
           {/* Form */}
           <div
-            className={`contact__form-wrap ${
-              inView ? 'visible' : ''
-            }`}
+            className={`contact__form-wrap ${inView ? 'visible' : ''
+              }`}
           >
             {sent ? (
               <div className="contact__success">
