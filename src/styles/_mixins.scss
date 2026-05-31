@@ -1,0 +1,72 @@
+@use 'variables' as *;
+
+// Container
+@mixin container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+// Section padding
+@mixin section {
+  padding: $section-py 5%;
+}
+
+// Gradient text
+@mixin grad-text {
+  background: $grad-main;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Fade up animation
+@mixin fade-up($delay: 0s) {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .7s ease $delay, transform .7s ease $delay;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Card base
+@mixin card {
+  background: $white;
+  border-radius: $r-xl;
+  border: 1px solid rgba($blue, .12);
+  box-shadow: $shadow-sm;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+    border-color: rgba($blue, .3);
+  }
+}
+
+// Glass effect
+@mixin glass {
+  background: rgba($white, .85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba($blue, .18);
+}
+
+// Responsive
+@mixin mobile {
+  @media (max-width: 768px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}

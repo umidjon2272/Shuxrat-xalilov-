@@ -1,0 +1,113 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  background: $dark;
+  color: $white;
+  padding: 64px 5% 32px;
+
+  &__inner { @include container; }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+
+    @include tablet { grid-template-columns: 1fr 1fr; }
+    @include mobile { grid-template-columns: 1fr; }
+  }
+
+  // ── Brand col ───────────────────────────────────
+  &__brand {}
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__logo-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: $grad-main;
+    @include flex-center;
+    font-weight: 800; font-size: 18px;
+  }
+
+  &__logo-text {
+    font-family: $font-display;
+    font-size: 20px; font-weight: 800;
+    span { color: $blue; }
+  }
+
+  &__tagline {
+    color: $text-light;
+    font-size: 14px; line-height: 1.7;
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba($white, .08);
+    border-radius: $r-sm;
+    padding: 10px 16px;
+    color: $white;
+    text-decoration: none;
+    font-size: 13px; font-weight: 600;
+    transition: $transition;
+
+    &:hover { background: rgba($blue, .2); }
+  }
+
+  // ── Nav cols ─────────────────────────────────────
+  &__col-title {
+    font-weight: 700; margin-bottom: 20px;
+    color: #e2e8f0; font-size: 15px;
+  }
+
+  &__col-link {
+    display: block;
+    background: none; border: none;
+    color: $text-light; font-size: 14px;
+    margin-bottom: 12px; padding: 0;
+    cursor: pointer; text-align: left;
+    font-family: $font-body;
+    transition: $transition;
+
+    &:hover { color: $blue; }
+  }
+
+  &__contact-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-light; font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  // ── Bottom ──────────────────────────────────────
+  &__bottom {
+    border-top: 1px solid rgba($white, .08);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__copy, &__location {
+    color: #64748b; font-size: 13px;
+  }
+}

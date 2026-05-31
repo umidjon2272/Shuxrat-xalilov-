@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-body;
+  background: $gray-light;
+  color: $dark;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: $font-display; line-height: 1.15; }
+
+a { text-decoration: none; color: inherit; }
+
+button { font-family: $font-body; cursor: pointer; }
+
+img { max-width: 100%; display: block; }
+
+// ── Animations ─────────────────────────────────────
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: .6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+// ── Utility ────────────────────────────────────────
+.visible { opacity: 1 !important; transform: translateY(0) !important; }

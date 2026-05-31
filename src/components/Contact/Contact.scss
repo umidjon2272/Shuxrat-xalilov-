@@ -1,0 +1,178 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  @include section;
+  background: $white;
+
+  &__inner { @include container; }
+
+  &__head {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__eyebrow {
+    font-size: 13px; font-weight: 700;
+    color: $blue; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 14px;
+  }
+
+  &__title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    span { @include grad-text; }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: start;
+
+    @include tablet { grid-template-columns: 1fr; }
+  }
+
+  // ── Left ─────────────────────────────────────────
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity .7s ease, transform .7s ease;
+    &.visible { opacity: 1; transform: translateX(0); }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f8fafc;
+    border-radius: $r-lg;
+    padding: 20px;
+    border: 1px solid rgba($blue, .12);
+    text-decoration: none;
+    color: inherit;
+    transition: $transition;
+
+    &:hover {
+      background: rgba($blue, .05);
+      border-color: rgba($blue, .3);
+      transform: translateX(6px);
+    }
+  }
+
+  &__link-icon {
+    width: 50px; height: 50px;
+    border-radius: $r-md;
+    @include flex-center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  &__link-label {
+    font-size: 12px; color: $text-light;
+    font-weight: 600; display: block;
+  }
+
+  &__link-value {
+    font-weight: 700; font-size: 15px;
+    display: block;
+  }
+
+  &__link-arrow {
+    margin-left: auto;
+    color: #cbd5e1; font-size: 18px;
+  }
+
+  &__hours {
+    margin-top: 12px;
+    background: $grad-card;
+    border-radius: $r-lg;
+    padding: 24px;
+    border: 1px solid rgba($blue, .15);
+
+    h4 { font-weight: 700; margin-bottom: 10px; }
+    p  { color: $text-muted; font-size: 14px; line-height: 2; }
+    strong { color: $blue; font-weight: 600; }
+  }
+
+  // ── Right ─────────────────────────────────────────
+  &__form-wrap {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity .7s ease .2s, transform .7s ease .2s;
+    &.visible { opacity: 1; transform: translateX(0); }
+  }
+
+  &__form {
+    background: #f8fafc;
+    border-radius: $r-xl;
+    padding: 36px;
+    border: 1px solid rgba($blue, .12);
+  }
+
+  &__form-title {
+    font-weight: 700; font-size: 20px; margin-bottom: 28px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__label {
+    font-size: 13px; font-weight: 600;
+    color: #374151; display: block;
+    margin-bottom: 6px;
+  }
+
+  &__input, &__select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid rgba($blue, .2);
+    border-radius: $r-md;
+    font-size: 14px; font-family: $font-body;
+    outline: none;
+    background: $white;
+    transition: $transition;
+    box-sizing: border-box;
+
+    &:focus { border-color: $blue; box-shadow: 0 0 0 3px rgba($blue, .1); }
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 16px;
+    background: $grad-main;
+    border: none;
+    border-radius: $r-md;
+    color: $white;
+    font-family: $font-body;
+    font-weight: 700; font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 28px rgba($blue, .35);
+    transition: $transition;
+    margin-top: 8px;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-glow;
+    }
+  }
+
+  // ── Success ───────────────────────────────────────
+  &__success {
+    background: $grad-card;
+    border-radius: $r-xl;
+    padding: 60px;
+    text-align: center;
+    border: 1px solid rgba($blue, .2);
+
+    &-icon { font-size: 64px; margin-bottom: 16px; }
+    h3 { font-weight: 800; font-size: 24px; margin-bottom: 12px; }
+    p  { color: $text-muted; }
+  }
+}

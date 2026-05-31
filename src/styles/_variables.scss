@@ -1,0 +1,39 @@
+// ── Colors ─────────────────────────────────────────
+$blue:       #0ea5e9;
+$indigo:     #6366f1;
+$dark:       #0a1628;
+$gray-light: #f0f7ff;
+$gray-mid:   #f8fafc;
+$text-muted: #475569;
+$text-light: #94a3b8;
+$white:      #ffffff;
+
+// ── Gradients ──────────────────────────────────────
+$grad-main: linear-gradient(135deg, $blue, $indigo);
+$grad-hero: linear-gradient(135deg, #e0f2fe 0%, #f0f7ff 40%, #ede9fe 100%);
+$grad-card: linear-gradient(135deg, rgba($blue,.07), rgba($indigo,.07));
+
+// ── Typography ─────────────────────────────────────
+$font-body:    'Manrope', sans-serif;
+$font-display: 'Syne', sans-serif;
+
+// ── Spacing ────────────────────────────────────────
+$section-py: 100px;
+$container:  1200px;
+
+// ── Radius ─────────────────────────────────────────
+$r-sm:   8px;
+$r-md:   14px;
+$r-lg:   20px;
+$r-xl:   28px;
+$r-full: 9999px;
+
+// ── Shadows ────────────────────────────────────────
+$shadow-sm:   0 4px 20px rgba($blue, .08);
+$shadow-md:   0 8px 32px rgba($blue, .15);
+$shadow-lg:   0 20px 60px rgba($blue, .22);
+$shadow-glow: 0 8px 30px rgba($blue, .4);
+
+// ── Transitions ────────────────────────────────────
+$transition:      all .25s cubic-bezier(.4,0,.2,1);
+$transition-slow: all .65s ease;

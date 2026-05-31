@@ -1,0 +1,33 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.stats {
+  background: $grad-main;
+  padding: 64px 5%;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+  }
+
+  &__item {
+    text-align: center;
+    color: $white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+    &.visible { opacity: 1; transform: translateY(0); }
+  }
+
+  &__num {
+    font-family: $font-display;
+    font-size: 44px; font-weight: 700;
+    margin-bottom: 6px; line-height: 1;
+  }
+
+  &__label {
+    font-size: 14px; opacity: .85; font-weight: 600;
+  }
+}
