@@ -19,10 +19,10 @@ export default function Hero() {
 
         {/* Left */}
         <div className={`hero__left ${inView ? 'visible' : ''}`}>
-          <div className="hero__badge">✨ SMM Mutaxassisi · Toshkent</div>
+          <div className="hero__badge">✨ Shaxsiy brend qurish bo'yicha mutaxasis</div>
 
           <h1 className="hero__title">
-            Brendingizni <span>Ijtimoiy</span> tarmoqlarda rivojlantirb beraman
+            Shaxsiy brendingizni <span>Ijtimoiy</span> tarmoqlarda rivojlantirb beraman
           </h1>
 
           <p className="hero__desc">
@@ -59,7 +59,7 @@ export default function Hero() {
             <div className="hero__profile">
               <div className="hero__avatar-lg">A</div>
               <div>
-                <div className="hero__profile-name">Azizjon Karimov</div>
+                <div className="hero__profile-name">Shuxrat Xalilov </div>
                 <div className="hero__profile-role">SMM Mutaxassisi & Targetolog</div>
                 <div className="hero__profile-tags">
                   <span className="hero__profile-tag">📍 Toshkent</span>

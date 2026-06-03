@@ -13,9 +13,12 @@
   }
 
   &__eyebrow {
-    font-size: 13px; font-weight: 700;
-    color: $blue; text-transform: uppercase;
-    letter-spacing: 2px; margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
   }
 
   &__title {
@@ -26,9 +29,9 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-    align-items: start;
+    align-items: center;
   }
 
   &__card {
@@ -37,62 +40,63 @@
     position: relative;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity .6s ease, transform .6s ease;
-    &.visible { opacity: 1; transform: translateY(0); }
+    transition: opacity .6s ease, transform .6s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     &--regular {
       background: $white;
       border: 1px solid rgba($blue, .15);
-      box-shadow: 0 4px 24px rgba(0,0,0,.06);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .06);
+
+     &:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 50px rgba($blue, .35);
+  border-color: rgba($blue, .6);
+  background: linear-gradient(135deg, rgba($blue, .12), rgba($indigo, .12));
+}
     }
 
     &--popular {
       background: $grad-main;
       box-shadow: 0 20px 60px rgba($blue, .35);
-      transform: translateY(0);
-      &.visible { transform: scale(1.04) translateY(0); }
+      transform: scale(1.05) translateY(0) !important;
+
+      &.visible {
+        transform: scale(1.05) translateY(0) !important;
+      }
+
+      &:hover {
+        transform: scale(1.05) translateY(-8px) !important;
+        box-shadow: 0 28px 70px rgba($blue, .45);
+      }
     }
   }
 
   &__badge {
     position: absolute;
-    top: -14px; left: 50%;
+    top: -14px;
+    left: 50%;
     transform: translateX(-50%);
     background: #fbbf24;
     color: #78350f;
     border-radius: $r-full;
     padding: 6px 20px;
-    font-size: 12px; font-weight: 800;
+    font-size: 12px;
+    font-weight: 800;
     white-space: nowrap;
   }
 
   &__name {
-    font-size: 14px; font-weight: 600;
-    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
 
     .pricing__card--regular & { color: #64748b; }
-    .pricing__card--popular & { color: rgba($white, .8); }
-  }
-
-  &__price-row {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-    margin-bottom: 28px;
-  }
-
-  &__price {
-    font-family: $font-display;
-    font-size: 36px; font-weight: 700;
-
-    .pricing__card--regular & { color: $dark; }
-    .pricing__card--popular & { color: $white; }
-  }
-
-  &__period {
-    font-size: 13px;
-    .pricing__card--regular & { color: #94a3b8; }
-    .pricing__card--popular & { color: rgba($white, .7); }
+    .pricing__card--popular & { color: rgba($white, .9); }
   }
 
   &__features {
@@ -118,7 +122,8 @@
     border: none;
     border-radius: $r-md;
     font-family: $font-body;
-    font-weight: 700; font-size: 15px;
+    font-weight: 700;
+    font-size: 15px;
     cursor: pointer;
     transition: $transition;
 
@@ -126,13 +131,18 @@
       background: $grad-main;
       color: $white;
       box-shadow: 0 6px 24px rgba($blue, .3);
-      &:hover { transform: translateY(-2px); box-shadow: $shadow-glow; }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-glow;
+      }
     }
 
     .pricing__card--popular & {
       background: rgba($white, .2);
       color: $white;
       border: 2px solid rgba($white, .5);
+
       &:hover { background: rgba($white, .3); }
     }
   }
@@ -141,6 +151,6 @@
     text-align: center;
     color: #64748b;
     font-size: 14px;
-    margin-top: 32px;
+    margin-top: 48px;
   }
 }
