@@ -23,7 +23,7 @@ export const SERVICES = [
     title: "SMM bo'yicha",
     desc: "Facebook va Instagram Ads orqali aniq auditoriyaga moslashtirilgan reklama kampaniyalarini yuritish."
   },
-];
+]; 
 
 export const PROJECTS = [
   { title: '40 kunda 70K jonli obunachi', category: 'Reels strategiyasi', result: '+70K Followers', img: '/images/ish1.jpg', tag: 'Yurist' },
