@@ -8,9 +8,21 @@ export const STATS = [
 ];
 
 export const SERVICES = [
-  { icon: '📈', title: 'Target buyicha', desc: "Biznesingiz uchun qisqa va uzoq muddatli sotuvni oshiradigan SMM strategiyalar ishlab chiqish." },
-  { icon: '📱', title: 'SHaxsiy brend buyicha ', desc: 'Instagram, Telegram va boshqa platformalar uchun vizual va matniy kontent strategiyasi.' },
-  { icon: '🎯', title: 'SMM boyicha', desc: 'Facebook & Instagram Ads orqali aniq auditoriyaga moslashtirilgan kampaniyalar.' },
+  {
+    icon: "📈",
+    title: "Target bo'yicha",
+    desc: "Biznesingiz uchun qisqa va uzoq muddatli sotuvni oshiradigan SMM strategiyalarini ishlab chiqish."
+  },
+  {
+    icon: "📱",
+    title: "Shaxsiy brend bo'yicha",
+    desc: "Instagram, Telegram va boshqa platformalar uchun vizual va matniy kontent strategiyasini yaratish."
+  },
+  {
+    icon: "🎯",
+    title: "SMM bo'yicha",
+    desc: "Facebook va Instagram Ads orqali aniq auditoriyaga moslashtirilgan reklama kampaniyalarini yuritish."
+  },
 ];
 
 export const PROJECTS = [
