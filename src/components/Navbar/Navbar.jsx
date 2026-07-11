@@ -3,7 +3,7 @@ import { NAV_LINKS } from '../../data';
 import './Navbar.scss';
 
 const sectionId = (name) => {
-  const map = { 'Home': 'hero', 'Haqida': 'haqida', 'Xizmatlar': 'xizmatlar', 'Loyihalar': 'loyihalar', 'Narxlar': 'narxlar', 'Aloqa': 'aloqa' };
+  const map = { 'Home': 'hero', 'Haqida': 'haqida', 'Xizmatlar': 'xizmatlar', 'Loyihalar': 'loyihalar',  'Aloqa': 'aloqa' };
   return map[name] || name.toLowerCase();
 };
 

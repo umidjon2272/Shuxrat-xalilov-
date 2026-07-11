@@ -1,4 +1,4 @@
-export const NAV_LINKS = ['Home', 'Haqida', 'Xizmatlar', 'Loyihalar', 'Narxlar', 'Aloqa'];
+export const NAV_LINKS = ['Home', 'Haqida', 'Xizmatlar', 'Loyihalar', 'Aloqa'];
 
 export const STATS = [
   { num: '47+', label: 'Muvaffaqiyatli Loyiha' },
@@ -12,16 +12,21 @@ export const SERVICES = [
   { icon: '📱', title: 'Kontent orqali sotuvlar ', desc: 'Instagram, Telegram va boshqa platformalar uchun vizual va matniy kontent strategiyasi.' },
   { icon: '🎯', title: 'Targetted Reklama', desc: 'Facebook & Instagram Ads orqali aniq auditoriyaga moslashtirilgan kampaniyalar.' },
   { icon: '🤝', title: 'Influencer Marketing', desc: "Blog'erlar va mikro-influencer'lar bilan hamkorlik tashkil etish." },
-  { icon: '🚀', title: 'Brand Strategiyasi', desc: 'Brendni onlayn muhitda kuchli va izchil pozitsiyalash.' },
+  { icon: '🚀', title: 'Brand Strategiyasi', desc: '' },
 ];
 
 export const PROJECTS = [
-  { title: 'Beauty Studio Nur', category: 'Instagram Marketing', result: '+340% Followers', img: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80', tag: "Go'zallik" },
-  { title: 'TechUz Store', category: 'Targeted Ads', result: '3x ROAS', img: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80', tag: 'Texnologiya' },
-  { title: 'Restoran Milano', category: 'Kontent Strategiya', result: '+180% Reach', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80', tag: 'Restoran' },
-  { title: 'FitLife Gym', category: "SMM To'liq Paket", result: '+500 Yangi Azolar', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80', tag: 'Fitness' },
-  { title: 'Kids Academy', category: 'Brand Building', result: '+220% Engagement', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80', tag: "Ta'lim" },
-  { title: 'EcoShop Uz', category: 'Instagram + Telegram', result: '2.5x Savdo', img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80', tag: 'E-commerce' },
+  { title: '40 kunda 70K jonli obunachi', category: 'Reels strategiyasi', result: '+70K Followers', img: '/images/ish1.jpg', tag: 'Yurist' },
+  { title: '30 kunda 6K jonli obunachi', category: 'Reels strategiyasi', result: '+6K Followers', img: '/images/ish2.jpg', tag: 'Blog' },
+  { title: '10 ta reels orqali 735 obunachi', category: 'Reels strategiyasi', result: '+735 Followers', img: '/images/ish3.jpg', tag: 'Biznes' },
+  { title: 'Sotuvni 2x ga oshirdik', category: 'SMM strategiyasi', result: '2x Sotuv', img: '/images/ish4.jpg', tag: 'Savdo' },
+  { title: '1 oyda 2000 jonli obunachi', category: 'Reels strategiyasi', result: '+2K Followers', img: '/images/ish5.jpg', tag: 'Blog' },
+  { title: "0dan 50 million so'mgacha sotuv", category: 'SMM + Target', result: '50M Sotuv', img: '/images/ish6.jpg', tag: 'E-commerce' },
+  { title: '2 oyda 10K obunachi', category: 'Reels strategiyasi', result: '+10K Followers', img: '/images/ish7.jpg', tag: 'Blog' },
+  { title: 'Target orqali sotuvni 2x ga oshirdik', category: 'Target reklama', result: '2x Sotuv', img: '/images/ish8.jpg', tag: 'Target' },
+  { title: "1000$ sarflab 10 000$ lik sotuv", category: 'Target reklama', result: '10x ROI', img: '/images/ish9.jpg', tag: 'Target' },
+  { title: 'Sotuvni 3x ga oshirdik', category: 'Target reklama', result: '3x Sotuv', img: '/images/ish10.jpg', tag: 'Target' },
+  { title: 'SMM strategiyasini qilib berdik', category: 'SMM strategiyasi', result: 'Full SMM', img: '/images/ish11.jpg', tag: 'Strategiya' },
 ];
 export const PLANS = [
   {
