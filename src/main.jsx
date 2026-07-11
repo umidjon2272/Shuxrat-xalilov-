@@ -1,4 +1,5 @@
 import React from 'react'
+document.documentElement.setAttribute('data-theme', 'light');
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/global.scss'

@@ -3,14 +3,14 @@ import { NAV_LINKS } from '../../data';
 import './Navbar.scss';
 
 const sectionId = (name) => {
-  const map = { 'Home': 'hero', 'Haqida': 'haqida', 'Xizmatlar': 'xizmatlar', 'Loyihalar': 'loyihalar',  'Aloqa': 'aloqa' };
+  const map = { 'Home': 'hero', 'Haqida': 'haqida', 'Xizmatlar': 'xizmatlar', 'Loyihalar': 'loyihalar', 'Aloqa': 'aloqa' };
   return map[name] || name.toLowerCase();
 };
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
-  const [active, setActive]       = useState('Home');
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState('Home');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,7 +29,9 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
         <a className="navbar__logo" href="#hero" onClick={() => scrollTo('Home')}>
-          <div className="navbar__logo-icon">Sh</div>
+          <div className="navbar__logo-icon" style={{ overflow: 'hidden', padding: 0 }}>
+            <img src="/images/shuhrat3.jpg" alt="Shuxrat" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <span className="navbar__logo-text">Shuxrat<span>Xalilov</span></span>
         </a>
 

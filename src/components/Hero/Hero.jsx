@@ -31,7 +31,7 @@ export default function Hero() {
 
           <div className="hero__actions">
             <button className="hero__btn-primary" onClick={() => scrollTo('aloqa')}>
-              🚀 Bepul Konsultatsiya
+              🚀  Konsultatsiya
             </button>
             <button className="hero__btn-secondary" onClick={() => scrollTo('loyihalar')}>
               📂 Loyihalar
@@ -57,7 +57,9 @@ export default function Hero() {
         <div className={`hero__right ${inView ? 'visible' : ''}`}>
           <div className="hero__card">
             <div className="hero__profile">
-              <div className="hero__avatar-lg">A</div>
+              <div className="hero__avatar-lg" style={{ overflow: 'hidden', padding: 0 }}>
+                <img src="/images/shuhrat1.jpg" alt="Shuxrat" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
               <div>
                 <div className="hero__profile-name">Shuxrat Xalilov </div>
                 <div className="hero__profile-role">SMM Mutaxassisi & Targetolog</div>

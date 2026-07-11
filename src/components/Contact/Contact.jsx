@@ -141,7 +141,7 @@ export default function Contact() {
             ) : (
               <div className="contact__form">
                 <div className="contact__form-title">
-                  Bepul Konsultatsiya Olish
+                   Konsultatsiya Olish
                 </div>
 
                 <div className="contact__fields">
@@ -203,7 +203,7 @@ export default function Contact() {
                   >
                     {loading
                       ? 'Yuborilmoqda...'
-                      : '🚀 Bepul Konsultatsiya So‘rash'}
+                      : '🚀  Konsultatsiya So‘rash'}
                   </button>
                 </div>
               </div>

@@ -22,7 +22,9 @@ export default function Footer() {
 
           <div className="footer__brand">
             <div className="footer__logo">
-              <div className="footer__logo-icon">SH</div>
+     <div className="footer__logo-icon" style={{ overflow: 'hidden', padding: 0 }}>
+  <img src="/images/shuhrat3.jpg" alt="Shuxrat" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+</div>
               <span className="footer__logo-text">Shuxrat<span>Xalilov</span></span>
             </div>
             <p className="footer__tagline">

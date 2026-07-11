@@ -2,10 +2,10 @@ import useInView from '../../hooks/useInView';
 import './About.scss';
 
 const CARDS = [
-  { icon: '🎯', title: 'Maqsadli Natija',  desc: 'Har bir kampaniya KPI asosida boshqariladi' },
-  { icon: '📊', title: 'Data-Driven',       desc: 'Analitika asosida qarorlar qabul qilinadi' },
-  { icon: '⚡', title: 'Tez Muloqot',       desc: '24 soat ichida javob kafolati' },
-  { icon: '🔄', title: "Doimiy O'sish",     desc: 'Har oy hisobot va strategiya yangilanishi' },
+  { icon: '🎯', title: 'Maqsadli Natija', desc: 'Har bir kampaniya KPI asosida boshqariladi' },
+  { icon: '📊', title: 'Data-Driven', desc: 'Analitika asosida qarorlar qabul qilinadi' },
+  { icon: '⚡', title: 'Tez Muloqot', desc: '24 soat ichida javob kafolati' },
+  { icon: '🔄', title: "Doimiy O'sish", desc: 'Har oy hisobot va strategiya yangilanishi' },
 ];
 
 export default function About() {
@@ -16,7 +16,9 @@ export default function About() {
       <div className="about__inner">
 
         <div className={`about__visual ${inView ? 'visible' : ''}`}>
-          <div className="about__avatar">A</div>
+          <div className="about__avatar" style={{ overflow: 'hidden', padding: 0 }}>
+            <img src="/images/shuhrat2.jpg" alt="Shuxrat" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+          </div>
           <div>
             <div className="about__name">Shuxrat Xalilov</div>
             <div className="about__role">Shaxsiy brand | Targetolog</div>
