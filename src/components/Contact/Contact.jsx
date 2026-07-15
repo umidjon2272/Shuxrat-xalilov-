@@ -109,7 +109,7 @@ export default function Contact() {
             ))}
 
             <div className="contact__hours">
-              <h4>⏰ Ish vaqtim</h4>
+              <h4>⏰ Ish vaqtimiz</h4>
 
               <p>
                 Dushanba – Shanba: 9:00 – 22:00
@@ -135,7 +135,7 @@ export default function Contact() {
                 <h3>So‘rovingiz yuborildi!</h3>
 
                 <p>
-                  Tez orada siz bilan bog‘lanaman.
+                  Tez orada siz bilan bog‘lanamiz.
                 </p>
               </div>
             ) : (
