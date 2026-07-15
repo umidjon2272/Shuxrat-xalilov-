@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/global.scss'
 
+console.log('MAIN LOADED');
+
 document.documentElement.setAttribute('data-theme', 'light');
 
 // Meta Pixel
